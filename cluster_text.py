@@ -22,11 +22,11 @@ def cluster_text(text):
     model.fit(X)
 
     labels=model.labels_
-    wiki_cl=pd.DataFrame(list(zip(reasons,labels)),columns=['title','cluster'])
-    #print(wiki_cl.sort_values(by=['cluster']))
+    clusters=pd.DataFrame(list(zip(reasons,labels)),columns=['title','cluster'])
+    #print(clusters.sort_values(by=['cluster']))
 
     for i in range(true_k):
-        print(wiki_cl[wiki_cl['cluster'] == i])
+        print(clusters[clusters['cluster'] == i])
         
     return
         
