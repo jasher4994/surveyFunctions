@@ -22,7 +22,7 @@ def cluster_text(text):
     model.fit(X)
 
     labels=model.labels_
-    clusters=pd.DataFrame(list(zip(reasons,labels)),columns=['title','cluster'])
+    clusters=pd.DataFrame(list(zip(text,labels)),columns=['title','cluster'])
     #print(clusters.sort_values(by=['cluster']))
 
     for i in range(true_k):
