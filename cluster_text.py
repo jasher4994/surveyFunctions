@@ -1,3 +1,5 @@
+from sklearn.feature_extraction.text import TfidfVectorizer,CountVectorizer
+
 def cluster_text(text):
     vectorizer = TfidfVectorizer(stop_words={'english'})
     X = vectorizer.fit_transform(text)
