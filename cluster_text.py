@@ -1,11 +1,12 @@
 from sklearn.feature_extraction.text import TfidfVectorizer,CountVectorizer
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 def cluster_text(text):
     vectorizer = TfidfVectorizer(stop_words={'english'})
     X = vectorizer.fit_transform(text)
 
-    import matplotlib.pyplot as plt
-    from sklearn.cluster import KMeans
+
     Sum_of_squared_distances = []
     K = range(2,10)
     for k in K:
